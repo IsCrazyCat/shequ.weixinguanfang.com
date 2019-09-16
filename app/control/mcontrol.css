@@ -1,0 +1,413 @@
+@charset "utf-8";
+#tinymask {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000000;
+	z-index: 9000;
+}
+.tinymask {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000000;
+	z-index: 8000;
+}
+#tinybox {
+	position: absolute;
+	border:2px solid #D4D4D4;
+    -moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+	z-index: 9001;
+	overflow:hidden;
+	background:#FFF;
+}
+.tinybox {
+	position: absolute;
+	border:2px solid #D4D4D4;
+    -moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+	z-index: 8001;
+	overflow:hidden;
+	background:#FFF;
+}
+#tinycontent {
+	font-size: 1.1em;
+		background:#FFF;
+}
+.tinycontent {
+	font-size: 1.1em;
+		background:#FFF;
+}
+
+/***好的****/
+#fancybox-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+.popLoad {
+	overflow:hidden;
+	zoom:1;
+	position: absolute;
+	width:100%;
+	background:url(images/load.gif) no-repeat center center #FFFFFF;
+	height:100%;
+}
+.popIframeTitle {
+	height:32px;
+	line-height:32px;
+	color: #000;
+	font-weight: bold;
+	font-size:12px;
+	overflow:hidden;
+	zoom:1;
+	position:relative;
+	padding-left:4px;
+    background-color: #F2F2F2;
+    background: -webkit-linear-gradient(top,#ffffff 0,#F2F2F2 100%);
+    background: -moz-linear-gradient(top,#ffffff 0,#F2F2F2 100%);
+    background: -o-linear-gradient(top,#ffffff 0,#F2F2F2 100%);
+    background: linear-gradient(to bottom,#ffffff 0,#F2F2F2 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#F2F2F2,GradientType=0);
+}
+.popIframeTitle .popIframeTitle {
+	float:left;
+	overflow:hidden;
+	zoom:1;
+}
+.popIframeTitle .popIframeCloseC {
+	width:32px;
+	height:32px;
+	float:right;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(images/popIframeClose.png) no-repeat center center;
+	margin-right:2px;
+}
+.popIframeTitle .popIframeCloseC .popIframeClose {
+	display:block;
+	width:32px;
+	height:32px;
+}
+.popIframeTitle .popIframeCloseC .popIframeClose:hover {
+	background-position:-23px 0;
+}
+.MessageControl a.cancel {
+	background-position: 0px -44px;
+	width: 48px;
+	margin: 8px 0 0;
+}
+.MessageControl a.cancel:hover {
+	background-position: 0px -66px;
+	text-decoration:none;
+}
+.MessageControl a.cancel:active {
+	background-position: 1px -65px;
+	text-decoration:none;
+}
+.MessageControl a.complete {
+	background-position: 0px -88px;
+	width: 48px;
+}
+.MessageControl a.complete:hover {
+	background-position: 0px -110px;
+	text-decoration:none;
+}
+.MessageControl a.complete:active {
+	background-position: 1px -109px;
+	text-decoration:none;
+}
+
+.MessageControl a.next {
+	background-position: 0px -176px;
+	width: 61px;
+	margin: 8px 0 0;
+}
+.MessageControl a.next:hover {
+	background-position: 0px -198px;
+	text-decoration:none;
+}
+.MessageControl a.next:active {
+	background-position: 1px -197px;
+	text-decoration:none;
+}
+.MessageControl a.know {
+	background-position: 0px -220px;
+	width: 60px;
+	margin: 8px 0 0;
+}
+.MessageControl a.know:hover {
+	background-position: 0px -242px;
+	text-decoration:none;
+}
+.MessageControl a.know:active {
+	background-position: 1px -241px;
+	text-decoration:none;
+}
+.Messageload{
+  background:url(images/msgloading.gif) no-repeat 20px 0;
+  padding-left:45px;
+}
+
+.LoadingCircle{
+  background:url(images/loading.gif) no-repeat center;
+  height:38px;
+  width:220px;
+}
+
+.cityloading{
+  background:url(images/msgloading.gif) #FFF no-repeat;
+  background-position: left center ;
+  width:205px;
+  position:absolute;
+  margin-top:-30px;
+  padding-left:20px;
+}
+.AlertMessage {
+	background:#fff url(images/AlertMessage-bg.png) repeat-x 0 bottom;
+	z-index:9200;
+	padding:1px;
+
+}
+.MessageTitle {
+	height:32px;
+	line-height:32px;
+	background:#e5e5e5 url(images/MessageTitle-bg.png) repeat-x 0 0;
+	color: #000;
+	font-weight: bold;
+	font-size:12px;
+	padding-left:10px;
+	border-bottom:1px #d8d8d8 solid;
+}
+
+
+.Message {
+	color:#333;
+	font-size:12px;
+	padding:20px 20px 20px 40px;
+}
+
+.MessageControl {
+	border-top: 1px #d8d8d8 dotted;
+	height:22px;
+	overflow: hidden;
+	zoom:1;
+	margin:0 10px;
+	padding:10px 0;
+}
+.MessageControl2{ float:right;}
+.MessageControl2 a{ font-size:12px;}
+.MessageControl a {
+	float:left;
+	height: 22px;
+	display:inline;
+	margin-left: 3px;
+	text-align:center;
+	overflow:hidden;
+	line-height:22px;
+	padding-left:1px;
+}
+.MessageControl a span{ float:left; cursor:pointer; padding:0 10px 0 9px;}
+.MessageControl a:hover{ text-decoration:none;}
+.MessageControl a.ok {
+	background:url(images/a-ok.png) no-repeat 0 0;
+	color:#fff;
+    -moz-border-radius:3px;      /* Gecko browsers */
+    -webkit-border-radius:3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+}
+.MessageControl a.ok span {
+	background:url(images/a-ok.png) no-repeat right 0;
+	color:#fff;
+    -moz-border-radius:3px;      /* Gecko browsers */
+    -webkit-border-radius:3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+}
+.MessageControl a.noback {
+	background:url(images/a-back.png) no-repeat;
+	color:#333333;
+    -moz-border-radius:3px;      /* Gecko browsers */
+    -webkit-border-radius:3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+}
+
+.MessageControl a.noback span {
+	background:url(images/a-back.png) no-repeat right 0;
+	color:#333333;
+    -moz-border-radius:3px;      /* Gecko browsers */
+    -webkit-border-radius:3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+}
+.MessageHelp {background:url(images/Help3.png) no-repeat 0 0;}
+
+.MessageRight { background:url(images/Right.png) no-repeat 0 0;}
+
+.MessageAlert { background:url(images/Alert.png) no-repeat 0 0;}
+.MessageInfo {background:url(images/Info.png) no-repeat 0 0;}
+.MessageWrong {background:url(images/Wrong.png) no-repeat 0 0;}
+.MessageLodding {
+	width:100px;
+	height:22px;
+	line-height:22px;
+	float:left;
+	margin:0 0 0 10px;
+	padding-left:20px;
+	white-space:nowrap;
+	display:none;
+	background:url(images/msgloading.gif) no-repeat center left ;
+}
+#controlLoad{
+	width:100px;
+	height:22px;
+	line-height:22px;
+	float:left;
+	margin:0 0 0 10px;
+	padding-left:20px;
+	white-space:nowrap;
+	display:none;
+	background:url(images/msgloading.gif) no-repeat center left ;
+	font-size:12px;
+}
+#valmsg{
+	color:#F30;
+	height:22px;
+	line-height:22px;
+	padding-left:5px;
+	display:none;
+}
+span.tips{
+	background:url(images/myls05.png) no-repeat;
+}
+span.tips, span.tips2 {
+	width:auto;
+	height:15px;
+	line-height:15px;
+	line-height:15px\0;
+	float:left;
+	margin:9px 0 0 8px;
+	padding-left:20px;
+	background-position:-118px -200px;
+	color:#989898;
+	white-space:nowrap;
+	display:none;
+	font-size:12px;
+}
+span.tips i, span.tips2 i{
+	font-style:normal;
+	color: #C00;
+}
+span.tips2 {
+	display:inline;
+	padding-left:28px;
+	height:16px;
+}
+span.tipsmes{
+	margin:4px 0 0 8px;
+}
+span.tipsx {
+	width:auto;
+	height:15px;
+	line-height:15px;
+	line-height:18px\0;
+	float:left;
+	margin:9px 0 0 8px;
+	background-position:-118px -200px;
+	color:#989898;
+	display:inline;
+}
+span.emali-ok {
+	background-position:-112px -985px;
+}
+span.emali-no {
+	background-position:-112px -1001px;
+	color:#da0000;
+}
+span.correct {
+	background-position:-118px -215px;
+	display:inline-block;
+}
+span.error {
+	background-position:-118px -230px;
+	color:#da0000;
+	display:inline-block;
+}
+span.nobg {
+	background:none;
+	padding-left:0;
+}
+span.inttext {
+	background:none;
+	padding-left:0;
+	display:inline;
+	color:#444;
+	margin:9px 5px 0;
+}
+span.inttext2 {
+	background:none;
+	padding-left:0;
+	display:inline;
+	color:#666;
+	margin:9px 5px 0;
+}
+span.error_nobg {
+	background:none;
+	padding-left:0;
+	display:inline;
+	color: #F30;
+	margin:9px 5px 0;
+}
+span.inttext2 em {
+	color:#f05001;
+}
+span.nobg em {
+	color:#506eaa;
+}
+span.butt {
+	background:none;
+	padding-left:0;
+	display:block;
+}
+span.pl15 {
+	padding-left:15px;
+}
+span.tips a {
+	margin:0 0 0 3px;
+	float:none;
+	display:inline;
+	height:auto;
+}
+span.phone-ok {
+	background-position:-112px -1216px;
+}
+span.phone-no {
+	background-position:-112px -1232px;
+	color:#da0000;
+}
+
+.lotab1 th {
+	padding:2px 0 10px;
+	font-size:14px;
+	width:100px;
+	font-weight:normal;
+	text-align:right;
+	color:#444;
+	vertical-align:top;
+}
+.lotab1 td {
+	padding:2px 8px;
+	vertical-align:middle;
+}
+.lotab1 td input.repass2{
+	width:40px;
+}

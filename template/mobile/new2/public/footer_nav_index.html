@@ -1,0 +1,44 @@
+<div class="foohi">
+
+
+    <footer class="footer_tou "  style="height:2.13333rem;position: fixed;padding-top:0.08rem;padding-bottom:0.08rem;">
+        <div id="i_shouye" class="footer_div div" style="text-align: center;">
+            <a href="{:U('Index/index')}">
+                      <span id="shouye_s" style="height:2rem;width:2rem;"
+                            class="shouye span"
+                      >&nbsp;</span>
+            </a>
+        </div>
+                    <div id="i_erweima" class="footer_div div" style="text-align: center;">
+                        <a href="{:U('Distribut/qr_code', ['user_id'=>$user_id])}">
+                            <span id="erweima_s"style="height:2rem;width:2rem;"
+                           class="erweima span"
+                          >&nbsp;</span>
+                        </a>
+                    </div>
+
+
+
+                    <div id="i_che" class="footer_div div">
+                        <a href="{:U('Cart/cart')}">
+                            <span id="che_s" style="height:2rem;width:2rem;"
+                            <if condition="CONTROLLER_NAME eq 'Cart'">class="che_s span" </if>
+                            <if condition="CONTROLLER_NAME neq 'Cart'">class="che span" </if> >&nbsp;</span>
+                        </a>
+                    </div>
+
+                    <div id="i_geren" class="footer_div div">
+                        <a href="{:U('User/index')}">
+                            <span id="geren_s" style="height:2rem;width:2rem;"
+                            <if condition="CONTROLLER_NAME eq 'User'">class="gerenzhongxin_s span" </if>
+                            <if condition="CONTROLLER_NAME neq 'User'">class="gerenzhongxin span" </if> >&nbsp;</span>
+                        </a>
+                    </div>
+
+        </footer>
+</div>
+
+<!--底部菜单样式切换 lishibo 2019/02/19-->
+<!-- 微信浏览器 调用微信 分享js-->
+<include file="public/wx_share_index"/>
+<!-- 微信浏览器 调用微信 分享js  end-->

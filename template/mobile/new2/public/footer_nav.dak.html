@@ -1,0 +1,52 @@
+<div class="footer clearfloat">
+    <dl class="left <if condition="CONTROLLER_NAME eq 'Index'"> active</if> ">
+    <a href="{:U('Index/index')}">
+        <dt></dt>
+        <dd>首页</dd>
+    </a>
+    </dl>
+    <dl class="left">
+        <a href="tel:{$tpshop_config['shop_info_phone']}">
+            <dt></dt>
+            <dd>客服</dd>
+        </a>
+    </dl>
+    <dl class="left">
+        <a href="{:U('User/super')}">
+            <dt></dt>
+            <dd>超级大咖</dd>
+        </a>
+    </dl>
+    <dl class="left  <if condition="CONTROLLER_NAME eq 'Cart'"> active</if>  ">
+    <a href="{:U('Cart/cart')}">
+        <dt></dt>
+        <dd>购物车</dd>
+    </a>
+    </dl>
+    <dl class="left <if condition="CONTROLLER_NAME eq 'User'"> active</if> ">
+    <li><a href="{:U('User/index')}">
+        <dt></dt>
+        <dd>我的DKI</dd>
+    </a>
+        </dl>
+</div>
+
+<script type="text/javascript">
+    /*$(document).ready(function(){
+          var cart_cn = getCookie('cn');
+          if(cart_cn == ''){
+            $.ajax({
+                type : "GET",
+                url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+                success: function(data){
+                    cart_cn = getCookie('cn');
+                    $('#cart_quantity').html(cart_cn);
+                }
+            });
+          }
+          $('#cart_quantity').html(cart_cn);
+    });*/
+</script>
+<!-- 微信浏览器 调用微信 分享js-->
+<include file="public/wx_share"/>
+<!-- 微信浏览器 调用微信 分享js  end-->

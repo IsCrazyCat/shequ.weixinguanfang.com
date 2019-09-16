@@ -1,0 +1,31 @@
+<foreach name="lists" item="v">
+    <div class="my_team_alon p"
+    <if condition="$v[second_leader] eq 2"/>
+    style="padding-left:3rem;"</if> >
+    <a href="javascript:void(0)"
+    <if condition="$v[yjnum] GT 0"> onclick="getTargetLowerList({$v[user_id]},'{$v[nickname]}')"</if>
+    >
+
+    <div class="team_head">
+        <img src="{$v[head_pic]|default=" __STATIC__/images/hi.jpg"}"/>
+    </div>
+    <div class="team_name_time">
+        <span class="t_t">{$v[nickname]}</span>
+        <span class="t_t">ID: &nbsp;{$v[user_id]}</span>
+
+        <if condition="$san eq 3">
+                              <span class="t_t" >
+                              推荐人({$v[tuiid]})：{$v[tuiname]}
+                                       </span>
+        </if>&nbsp;
+
+
+        <span class="t_t">〖<if condition="$v[level] eq 2">合伙人<elseif condition="$v[level] eq 3"/>高级合伙人<elseif
+                condition="$v[level] eq 4"/>钻石合伙人<else/>注册会员</if>〗</span>
+        <span class="t_t" style="display: none">消费总额：{$v[total_amount]}元</span>
+        <span class="t_t" style="display: none">累计佣金：{$v[distribut_money]}元</span>
+        <span class="t_t">加入时间：{:date('Y-m-d',$v[reg_time])}</span>
+    </div>
+    </a>
+    </div>
+</foreach>

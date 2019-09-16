@@ -1,0 +1,111 @@
+<include file="public/header" title="我的团队" body="g4"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/distribut/css/main.css"/>
+<include file="public/header_nav" title="我的团队" href="{:U('/Mobile/User/index')}"/>
+
+<div class="retails_head">
+    <div class="my_head" >
+        <div class="head">
+            <img src="{$user[head_pic]|default="__STATIC__/images/user68.jpg"}"/>
+        </div>
+        <div class="my_name_in fl" style="width:10rem;height:auto;">
+            <p class="my_name" style="height:auto;"><span style="float:left; font-size:0.8rem;">ID:{$user['user_id']}</span><span style="float:left; font-size:0.8rem;"  >〖<if condition="$user[level] eq 2">商城代理<elseif condition="$user[level] eq 3" />区级代理<elseif condition="$user[level] eq 4" />市级代理<elseif condition="$user[level] eq 5" />省级代理<else />注册会员</if>〗</span></p>
+            <p class="my_name" style="height:auto;"><span style="float:left; font-size:0.8rem;">{$user['nickname']}</span></p>
+
+            <p class="my_in">{$store.store_name}</p>
+        </div>
+    </div>
+    <!--<div class="my_share">
+        <a href="{:U('Distribut/set_store')}"><i class="icon-setting"></i></a>
+    </div>-->
+
+    <if condition="$Request.param.type eq ''">
+        <p class="open_time">推荐人(ID:{$tuiid}):{$mycoddwunt}    直接分享总人数：{$count}个</p>
+    </if>
+    <if condition="$Request.param.type eq 'HHR'">
+        <p class="open_time">间接分享总人数：{$count}个</p>
+    </if>
+    <if condition="$Request.param.type eq 'GJHHR'">
+        <p class="open_time">转分享总人数：{$count}个</p>
+    </if>
+    <if condition="$Request.param.type eq 'ZSHHR'">
+        <p class="open_time">钻石合伙人总人数：{$count}个</p>
+    </if>
+</div>
+
+
+<div class="tit-flash-sale p mytit_flash">
+    <div class="maleri30">
+        <ul class="">
+            <li style="width: 33%" <if condition="$Request.param.type eq ''">class="red"</if>>
+            <a href="{:U('/Mobile/Distribut/lower_listq')}" class="tab_head">直接分享</a>
+            </li>
+            <li style="width: 33%" id="WAITPAY" <if condition="$Request.param.type eq 'HHR'">class="red"</if>">
+            <a href="{:U('/Mobile/Distribut/lower_listq',array('type'=>'HHR'))}" class="tab_head" >间接分享</a>
+            </li>
+            <li style="width: 33%" id="WAITSEND" <if condition="$Request.param.type eq 'GJHHR'">class="red"</if>>
+            <a href="{:U('/Mobile/Distribut/lower_listq',array('type'=>'GJHHR'))}"  class="tab_head">转分享</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!--订单列表-s-->
+<div class="ajax_return">
+    <if condition="count($lists) eq 0">
+        <!--没有内容时-s--->
+        <div class="comment_con p">
+            <div class="none">
+                <img src="__STATIC__/images/none2.png">
+                <br><br>
+                抱歉未查到数据！
+                <div class="paiton">
+                    <div class="maleri30" style="display: none;">
+                        <a class="soon" href="/"><span>去逛逛</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--没有内容时-e--->
+    </if>
+</div>
+<!--订单列表-e-->
+<script type="text/javascript" src="__STATIC__/js/sourch_submit.js"></script>
+<script type="text/javascript">
+
+    /**
+     * 加载订单*/
+    ajax_sourch_submit();
+
+
+    var  page = 1;
+    /**
+     *加载更多
+     */
+    function ajax_sourch_submit()
+    {
+
+        page += 1;
+        $.ajax({
+            type : "GET",
+            url:"/index.php?m=Mobile&c=Distribut&a=lower_listq&type={$Request.param.type}&is_ajax=1&p="+page,//+tab,
+//			url:"{:U('Mobile/User/order_list',array('type'=>$_GET['type']),'')}/is_ajax/1/p/"+page,//+tab,
+            //data : $('#filter_form').serialize(),
+            success: function(data)
+            {
+                if(data == ''){
+
+                    $('#getmore').hide();
+                }
+                else
+                {
+
+                    $(".ajax_return").append(data);
+                    $(".m_loading").hide();
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

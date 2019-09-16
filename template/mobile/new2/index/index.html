@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页-{$tpshop_config['shop_info_store_title']}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="keywords" content="{$tpshop_config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$tpshop_config['shop_info_store_desc']}" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/index.css"/>
+    <link rel="stylesheet" href="__STATIC__/dki/css/style.css" />
+
+    <script src="__STATIC__/dki/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/dki/js/fontsize.js"></script>
+    <script type="text/javascript" src="__STATIC__/dki/js/animation.js"></script>
+</head>
+
+<body>
+<div id="search_hide" class="search_hide" style="padding:0px;margin-top:0px;">
+    <div style='background:#FAE651;height:100%;padding:0px;margin-top:0px;padding-top:0.1rem;'>
+        <h2> <span class="close"><img style="margin-top:0.55rem;" src="__STATIC__/dki/images/list-return.png"></span></h2>
+        <div id="mallSearch" class="search_mid">
+            <div id="search_tips" style="display:none;"></div>
+            <div class="searchdotm" style="background:#fff;    border-radius: 0.35rem;">
+                <form class="set_ip"name="sourch_form" id="sourch_form" method="post" action="{:U('Goods/search')}">
+                    <div class="mallSearch-input">
+                        <div id="s-combobox-135">
+                            <input class="s-combobox-input" name="q" id="q"  placeholder="请输入关键词"  type="text" value="<?php echo I('q'); ?>" />
+                        </div>
+                        <input type="button" value="" class="button"  onclick="if($.trim($('#q').val()) != '') $('#sourch_form').submit();" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section class="mix_recently_search"><h3>热门搜索</h3>
+        <ul>
+            <foreach name="tpshop_config.hot_keywords" item="wd" key="k">
+                <li><a href="{:U('Goods/search',array('q'=>$wd))}" <if condition="$k eq 0">class="ht"</if>>{$wd}</a></li>
+            </foreach>
+        </ul>
+    </section>
+</div>
+<div id="shoppage">
+    <!--<header id="header">
+        <a href="{:U('Goods/categoryList')}" class="top_bt"></a>
+        <a href="{:U('Cart/cart')}" class='user_btn'></a>
+        <span href="javascript:void(0)" class="logo">{$tpshop_config['shop_info_store_name']}</span>
+    </header>-->
+
+    <div class="indexTop" >
+        <ul class="nav clearfloat model" id="nav">
+            <li id="a11" class="active"><a href="{:U('User/super')}">SQX</a></li>
+            <li id="a22"><a href="#a2">零售区</a></li>
+            <li id="a33"><a href="#a3">批发区</a></li>
+            <li style="display: none" id="a44"><a href="#a4">特价区</a></li>
+            <li id="a44"><a href="{:U('Mobile/User/daishouqu',array('type'=>'DAISHOU'))}">代售区</a></li>
+            <li id="a44"><a href="{:U('Mobile/User/chongzhi')}">充值</a></li>
+            <button class="search" id="search_text"></button>
+        </ul>
+        <div id="indexBanner"   style="background-color: #FFF000;">
+            <ul class="img" id="a1">
+                <adv pid ="2" limit="1" item="v">
+                    <li style="background-color:#ffe749"><a href="{:U('Mobile/User/chongzhi')}" <if condition="$v['target'] eq 1">target="_blank"</if> ><img src="{$v[ad_code]}" title="{$v[title]}"width="100%" style="{$v[style]}"/></a></li>
+                </adv>
+            </ul>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="index" style="overflow-x: hidden;">
+
+        <div class="title1"><a href="{:U('mobile/user/chongzhi')}"><img src="__STATIC__/dki/images/index-title1.png" /></a></div>
+        <div class="index-infor clearfloat model">
+            <div class="left b">社群新零售</div>
+            <div class="scrollDiv left" id="s1">
+                <ul>
+
+                    <volist  name ="dklist" id="v">
+                        <li class="clearfloat">
+                            <div class="li">
+                                <b>手机号</b>
+                                <span>{$v[nickname]}</span>
+                            </div>
+                            <div class="li">
+                                <b>注册时间</b>
+                                <span>{$v[reg_time]|date='Y/m/d H:i:m',###}</span>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="right imgStar" id="a2"><img src="__STATIC__/dki/images/index-img1.png" /></div>
+        </div>
+
+        <div class="index-free clearfloat model">
+            <div class="left">
+                <div class="box1 model">
+                </div>
+
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+
+        <div class="index-shop">
+            <div class="title">
+                <b>—  零售区  —</b>
+                <span>RETAIL SHOPPING DISTRICT</span>
+            </div>
+            <div class="clearfloat">
+                <tpshop sql="select * from __PREFIX__goods where is_recommend=1 and is_on_sale=1 and cat_id=3 order by sort desc limit 9" item="v" key="k">
+                    <a href="{:U('Mobile/Goods/goodsInfo',array('id'=>$v[goods_id]))}">
+                    <dl class="left model">
+
+                        <dt><img src="{$v.goods_id|goods_thum_images=400,400}" /></dt>
+
+                        <dd>
+                            <div class="title">{$v.goods_name}</div>
+                            <div class="clearfloat">
+                                <div class="left dkiPrice">价格：{$v.shop_price}</div>
+                                <ul class="clearfloat right str">
+                                    <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                    <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                    <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                    <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                    <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                </ul>
+                            </div>
+                            <div style="display: none" class="price">市场价：<span>￥{$v.market_price}</span></div>
+                            <div class="buy-immediately" style="color: red;margin-top: 9px">点击购买</div>
+                        </dd>
+
+                    </dl>
+                    </a>
+                </tpshop>
+            </div>
+        </div>
+
+
+
+        <div class="index-shop">
+            <!--批发区-->
+            <div class="title2" id="a3"><a href="{:U('Mobile/index/pifaqu')}" ><img src="__STATIC__/dki/images/index-title2.png" /></a></div>
+            <div class="clearfloat">
+                <tpshop sql="select * from __PREFIX__goods where is_recommend=1 and is_on_sale=1 and cat_id=4 order by sort desc limit 9" item="v" key="k">
+                    <a href="{:U('Mobile/Goods/goodsInfo',array('id'=>$v[goods_id]))}">
+                        <dl class="left model">
+
+                            <dt><img src="{$v.goods_id|goods_thum_images=400,400}" /></dt>
+
+                            <dd>
+                                <div class="title">{$v.goods_name}</div>
+                                <div class="clearfloat">
+                                    <div class="left dkiPrice">价格：{$v.shop_price}</div>
+                                    <ul class="clearfloat right str">
+                                        <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                        <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                        <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                        <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                        <li class="right"><img src="__STATIC__/dki/images/star.png" /></li>
+                                    </ul>
+                                </div>
+                                <div style="display: none" class="price">市场价：<span>￥{$v.market_price}</span></div>
+                                <div class="buy-immediately" style="color: red;margin-top: 9px">点击购买</div>
+                            </dd>
+
+                        </dl>
+                    </a>
+                </tpshop>
+            </div>
+        </div>
+        <!--特价区-->
+        <div class="index-shop index-shop2" style="display: none">
+            <div class="title">
+                <b>—  特价区  —</b>
+                <span>SPECIAL ZONE</span>
+            </div>
+            <div class="clearfloat">
+                <tpshop sql="select * from __PREFIX__goods where is_recommend=1 and is_on_sale=1 and cat_id=26 order by sort desc limit 8" item="v" key="k">
+                    <dl class="left model">
+                        <dt><a href="{:U('Mobile/Goods/goodsInfo',array('id'=>$v[goods_id]))}"><img src="{$v.goods_id|goods_thum_images=400,400}"></a></dt>
+                        <dd>
+                            <style>
+                                .yihang{
+                                    white-space: nowrap;
+                                    text-overflow:ellipsis;
+                                    text-overflow: ellipsis;
+                                    overflow:hidden;
+                                }
+                            </style>
+                            <div class="title yihang"><a href="#">{$v.goods_name}</a></div>
+                            <div class="clearfloat">
+                                <div class="left dkiPrice">DKI价格：{$v.shop_price}</div>
+
+                            </div>
+                            <div class="price">市场价：<span>￥{$v.market_price}</span></div>
+                            <div class="buy-immediately"><a href="javascript:AjaxAddCart({$v[goods_id]},1,0);">立即购买</a></div>
+                        </dd>
+                    </dl>
+                </tpshop>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    $(function() {
+        $('#search_text').click(function(){
+            $("#shoppage").children('div').hide();
+            $("#search_hide").css('position','fixed').css('top','0px').css('width','100%').css('z-index','999').show();
+        })
+        $('#get_search_box').click(function(){
+            $("#shoppage").children('div').hide();
+            $("#search_hide").css('position','fixed').css('top','0px').css('width','100%').css('z-index','999').show();
+        })
+        $("#search_hide .close").click(function(){
+            $("#shoppage").children('div').show();
+            $("#search_hide").hide();
+        })
+    });
+</script>
+
+<!--DKI footer 20190721-->
+<div class="footer clearfloat">
+    <dl class="left <if condition="CONTROLLER_NAME eq 'Index'"> active</if> ">
+    <a href="{:U('Index/index')}">
+        <dt></dt>
+        <dd>首页</dd>
+    </a>
+    </dl>
+    <dl class="left">
+        <a onclick="alert('客服电话：17564506417 客服QQ:2665871937')">
+            <dt></dt>
+            <dd>客服</dd>
+        </a>
+    </dl>
+    <dl class="left">
+        <a href="#">
+            <dt></dt>
+            <dd>社群新零售</dd>
+        </a>
+    </dl>
+    <dl class="left  <if condition="CONTROLLER_NAME eq 'Cart'"> active</if>  ">
+    <a href="{:U('Cart/cart')}">
+        <dt></dt>
+        <dd>购物车</dd>
+    </a>
+    </dl>
+    <dl class="left <if condition="CONTROLLER_NAME eq 'User'"> active</if> ">
+    <li><a href="{:U('User/index')}">
+        <dt></dt>
+        <dd>个人中心</dd>
+    </a>
+        </dl>
+</div>
+
+<script type="text/javascript">
+    /*$(document).ready(function(){
+          var cart_cn = getCookie('cn');
+          if(cart_cn == ''){
+            $.ajax({
+                type : "GET",
+                url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+                success: function(data){
+                    cart_cn = getCookie('cn');
+                    $('#cart_quantity').html(cart_cn);
+                }
+            });
+          }
+          $('#cart_quantity').html(cart_cn);
+    });*/
+</script>
+<!-- 微信浏览器 调用微信 分享js-->
+<include file="public/wx_share"/>
+<!-- 微信浏览器 调用微信 分享js  end-->
+
+<script type="text/javascript">
+    function AutoScroll(obj){
+        $(obj).find("ul:first").animate({
+            marginTop:"-35px"
+        },500,function(){
+            $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+    }
+    $(document).ready(function(){
+        setInterval('AutoScroll("#s1")',3000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    //search在滚动条下滑一定高度后固定置顶
+    var titleH = $(".index-video .tab").offset().top;
+    $(window).scroll(function () {
+        var scroH = $(this).scrollTop();
+        if (scroH > titleH) {
+            $(".tab").css({ "position": "fixed", "top": 0 ,"width":"7.5rem","background":"#EEF0F0"});
+            $(".indexTop .nav").css({ "position": "static" });
+        } else if (scroH <= titleH) {
+            $(".tab").css({ "position": "static" });
+            $(".indexTop .nav").css({ "position": "fixed" });
+        }
+    });
+
+
+    $(function(){
+        $(window).scroll(function(){
+            //为页面添加页面滚动监听事件
+            var wst =  $(window).scrollTop() //滚动条距离顶端值
+            var i;
+            for (i=1; i<5; i++){             //加循环
+                if($("#a"+i).offset().top-60<=wst){ //判断滚动条位置
+                    $('#nav li').removeClass("active"); //清除c类
+                    $("#a"+i+i).addClass("active"); //给当前导航加c类
+                }
+            }
+        })
+        $('#nav li').click(function(){
+            $('#nav li').removeClass("active");
+            $(this).addClass("active");
+        });
+    })
+</script>
+
+
+
+</body>
+</html>
+
+

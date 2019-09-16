@@ -1,0 +1,46 @@
+<include file="public/layout" />
+<script src="__PUBLIC__/static/css/layDate-v5.0.9/laydate/laydate.js"></script>
+<style type="text/css">
+    html, body {
+        overflow: visible;
+    }
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="批发区冷冻时间设置"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>批发区冷冻时间设置</h3>
+                <h5></h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" method="post" id="handlepost" action="">
+        <div class="ncap-form-default">
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>设置天数</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="test1" name="endTime" value="{$endTime}">&nbsp;&nbsp;天
+                </dd>
+            </dl>
+            <div class="bot"><a href="JavaScript:void(0);" onClick="formSubmit()" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+
+
+    function formSubmit(){
+        $("#handlepost").submit();
+    }
+
+</script>
+</body>
+</html>

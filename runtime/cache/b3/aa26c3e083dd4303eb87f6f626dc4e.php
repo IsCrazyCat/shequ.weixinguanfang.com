@@ -1,0 +1,3 @@
+<?php
+//000000000000a:18:{s:8:"site_url";s:30:"http://dinghuo.boshang3710.com";s:9:"record_no";s:0:"";s:10:"store_name";s:15:"社群新零售";s:10:"store_logo";s:67:"/public/upload/logo/2019/08-20/e497e735463e1713bf52627c1d3bc268.png";s:11:"store_title";s:15:"社群新零售";s:10:"store_desc";s:15:"社群新零售";s:13:"store_keyword";s:15:"社群新零售";s:7:"contact";s:15:"社群新零售";s:5:"phone";s:11:"15266853100";s:7:"address";s:12:"创业大厦";s:2:"qq";s:0:"";s:3:"qq2";s:0:"";s:3:"qq3";s:0:"";s:6:"mobile";s:11:"15266853100";s:8:"province";s:2:"15";s:4:"city";s:3:"237";s:8:"district";s:4:"2629";s:11:"form_submit";s:2:"ok";}
+?>

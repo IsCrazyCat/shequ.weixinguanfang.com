@@ -1,0 +1,152 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:41:"./template/mobile/new2/user\chongzhi.html";i:1566643203;}*/ ?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>充值--社群新零售</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="__STATIC__/dki/css/style.css" />
+    <script src="__STATIC__/dki/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/dki/js/fontsize.js"></script>
+    <script type="text/javascript" src="__STATIC__/dki/js/animation.js"></script>
+    <style>
+        .float-button {
+            position: fixed;
+             height: 98px;
+            width: 98px;
+            bottom: 130px;
+            right: 0px;
+            background-image: url("__STATIC__/dki/images/fan.png");
+            z-index:9999;
+            /*border-radius: 15px;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="super model">
+    <a href="<?php echo U('mobile/index/index'); ?>">
+        <div class="float-button">
+        </div>
+    </a>
+    <div style="width:6rem;height:61px;margin:0 auto;    margin-bottom: 224px;">
+
+            <div style="display:block;width: 6rem;height: 61px;border-radius: 1rem;">
+                <b style="color: #e2c079;;font-size:0.4rem;margin: 0 auto;    display: block;width: 267px;position: relative;top: 15px;"><img src="__STATIC__/dki/images/weixiner.png"></b>
+            </div>
+
+    </div>
+    <div style="width:6rem;height:61px;margin:0 auto;    margin-bottom: 15px;">
+
+            <div style="display:block;background:#75461c;width: 6rem;height: 61px;border-radius: 1rem;color: #765110;">
+                <b style="color: #e2c079;;font-size:0.4rem;margin: 0 auto;    display: block;width: 123px;position: relative;top: 15px;">微信收款码</b>
+            </div>
+
+    </div>
+    <div style="width:6rem;height:61px;margin:0 auto;    margin-bottom: 346px;">
+
+        <div style="display:block;width: 6rem;height: 61px;border-radius: 1rem;">
+            <b style="color: #e2c079;;font-size:0.4rem;margin: 0 auto;    display: block;width: 267px;position: relative;top: 15px;"><img src="__STATIC__/dki/images/tixing.png"></b>
+        </div>
+
+    </div>
+    <div style="width:6rem;height:61px;margin:0 auto;    margin-bottom: 259px;">
+
+        <div style="display:block;width: 6rem;height: 61px;border-radius: 1rem;">
+            <b style="color: #e2c079;;font-size:0.4rem;margin: 0 auto;    display: block;width: 267px;position: relative;top: 15px;"><img src="__STATIC__/dki/images/zhifuboc.png"></b>
+        </div>
+
+    </div>
+    <div style="width:6rem;height:61px;margin:0 auto;    margin-bottom: 15px;">
+
+        <div style="display:block;background:#75461c;width: 6rem;height: 61px;border-radius: 1rem;color: #765110;">
+            <b style="color: #e2c079;;font-size:0.4rem;margin: 0 auto;    display: block;width: 149px;position: relative;top: 15px;">支付宝收款码</b>
+        </div>
+
+    </div>
+    <div class="cnt model">
+        <dl class="clearfloat">
+            <dt class="left"></dt>
+            <dd class="right">
+                <ul>
+                    <li>收款卡号:6230 5213 2001 3327 274</li>
+                    <li></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="clearfloat">
+            <dt class="left"></dt>
+            <dd class="right">
+                <ul>
+                    <li>所属银行:中国农业银行</li>
+                    <li></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="clearfloat">
+            <dt class="left"></dt>
+            <dd class="right">
+                <ul>
+                    <li>收款人:陈英焘</li>
+                    <li></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="clearfloat">
+            <dt class="left"></dt>
+            <dd class="right">
+                <ul>
+                    <li>联系电话:17564506417</li>
+                    <li></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="clearfloat">
+            <dt class="left"></dt>
+            <dd class="right">
+                <ul>
+                    <li>客服QQ:2665871937 <a href="http://wpa.qq.com/msgrd?v=3&uin=2665871937&site=qq&menu=yes">  <img  border="0" src="http://wpa.qq.com/pa?p=2:2665871937:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></ a></a> </li>
+                    <li></li>
+                </ul>
+            </dd>
+        </dl>
+
+    </div>
+
+    <!--onClick="superOpen()"-->
+
+</div>
+
+<div class="super-popup">
+    <div class="know" onClick="superClose()"><img src="__STATIC__/dki/images/super-img2.png" /></div>
+</div>
+
+<script>
+    $(window).scroll(function () {
+        var h=$(window).height();
+        if($(window).scrollTop() >= 200){
+            $(".privilege").show();
+        } else{
+            $(".privilege").hide();
+        }
+    });
+
+
+    function superOpenNEW(){
+
+        var level = '<?php echo $user[level]; ?>'*1;
+
+        if(level>=2){
+            alert("恭喜，您已经是DKI会员");
+        }else{
+            document.location.href="/index.php/mobile/User/recharge_active";
+        }
+
+    }
+</script>
+
+</body>
+</html>
+
+

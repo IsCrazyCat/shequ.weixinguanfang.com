@@ -1,0 +1,153 @@
+<volist name="lists" id="list">
+    <div class="mypackeg ma-to-20 getmore">
+        <div class="packeg p">
+            <div class="maleri30">
+                <div class="fl">
+                    <h1><span></span><span class="bgnum"></span></h1>
+                    <p class="bgnum"><span>订单编号:</span><span>{$list.order_sn}</span></p>
+                </div>
+                <style>
+                    .link_button {
+                        -webkit-border-radius: 4px;
+                        -moz-border-radius: 4px;
+                        border-radius: 4px;
+                        border: solid 1px #20538D;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+                        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+                        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+                        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+                        background: #4479BA;
+                        color: #FFF;
+                        padding: 8px 12px;
+                        text-decoration: none;
+                    }
+                </style>
+                <div class="fr">
+                    <if condition="$list['order_prom_type'] eq 9">
+                        <span>
+<if condition="$list['end'] eq 2">
+<a href="{:U("Mobile/user/zhuanmai",array('order_id'=>$list['order_id']))}"  class="link_button">转&nbsp;卖</a>&nbsp;&nbsp;&nbsp;<a href="{:U("Mobile/user/fahuo",array('order_id'=>$list['order_id']))}" class="link_button">发&nbsp;货</a>
+    <else>
+      <span style="font-size:18px;"><span class="num" id="dhms">
+        <strong id="begin_time{$list['order_id']}" style="display:none;">{$list['endTime']}</strong>
+                    距离结束：
+               <strong id="dd{$list['order_id']}"></strong>天
+               <strong id="hh{$list['order_id']}"></strong>小时
+               <strong id="mm{$list['order_id']}"></strong>分
+               <strong id="ss{$list['order_id']}" style="color:red;"></strong>秒
+    </span></span>
+</if>
+
+
+                        </span>
+                        <else>
+                            <span>{$list['order_status_desc']}</span>
+                    </if>
+                </div>
+            </div>
+        </div>
+        <div class="shop-mfive p">
+            <div class="maleri30">
+                    <foreach  name="list.goods_list" item="good">
+                        <div class="sc_list se_sclist paycloseto">
+                            <a <if condition="$list.receive_btn eq 1">href="{:U('/Mobile/User/order_detail',array('id'=>$list['order_id'],'waitreceive'=>1))}" <else/> href="{:U('/Mobile/User/order_detail',array('id'=>$list['order_id']))}"</if>>
+                            <div class="shopimg fl">
+                                <img src="{$good[goods_id]|goods_thum_images=200,200}">
+                            </div>
+                            <div class="deleshow fr">
+                                <div class="deletes">
+                                    <span class="similar-product-text">{$good[goods_name]|getSubstr=0,20}</span>
+                                </div>
+                                <div class="prices  wiconfine">
+                                    <p class="sc_pri"><span>￥</span><span>{$good[member_goods_price]}</span></p>
+                                </div>
+                                <div class="qxatten  wiconfine">
+                                    <p class="weight"><span>数量</span>&nbsp;<span>{$good[goods_num]}</span></p>
+                                </div>
+                                <div class="buttondde">
+                                   <if condition="$list[return_btn] eq 1">
+                                        <a href="{:U('Mobile/User/return_goods',array('rec_id'=>$good['rec_id']))}">申请售后</a>
+                                    </if>
+                                    <if condition="$good[is_send] gt 1">
+                                        <a class="applyafts">已申请售后</a>
+                                    </if>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </foreach>
+            </div>
+        </div>
+        <div class="shop-rebuy-price p">
+            <div class="maleri30">
+                <span class="price-alln">
+                    <!--<span class="red">￥{$list['order_amount']}</span><span class="threel">共{$list.goods_list|count}件</span>-->
+                    <span class="red">￥{$list['order_amount']}</span><span class="threel" id="goodsnum">共{$list.count_goods_num}件</span>
+                </span>
+                <if condition="$list.pay_btn eq 1">
+                    <a class="shop-rebuy paysoon" href="{:U('Mobile/Cart/cart4',array('order_id'=>$list['order_id']))}">立即付款</a>
+                </if>
+                <if condition="$list.cancel_btn eq 1">
+                    <a class="shop-rebuy " onClick="cancel_order({$list.order_id})">取消订单</a>
+                </if>
+                <if condition="$list.receive_btn eq 1">
+                    <a class="shop-rebuy paysoon" onclick="orderConfirm({$list.order_id})">确认收货</a>
+                </if>
+                <if condition="$list.comment_btn eq 1">
+                    <a class="shop-rebuy" href="{:U('/Mobile/User/comment')}">评价</a>
+                </if>
+                <if condition="$list.shipping_btn eq 1">
+                    <a class="shop-rebuy" class="shop-rebuy" href="{:U('Mobile/User/express',array('order_id'=>$list['order_id']))}">查看物流</a>
+                </if>
+            </div>
+        </div>
+    </div>
+</volist>
+<strong id="boss" style="display:none;">{$arr_id}</strong>
+<script type="text/javascript">
+    //定义方法
+    function GetRTime(){
+        //获取当前时间
+        var NowTime = new Date();
+
+        var Boss = $("#boss").text();
+        var arr=Boss.split(",");
+        //二维数组遍历
+        for(var i=0;i<arr.length;i++){
+                //获取终止时间，在HTML中，通过id获取
+                begin_time="#begin_time"+arr[i];
+                var EndTime = $(begin_time).text();
+                //计算终止时间与当前时间的时间差
+                //注意js时间戳与PHP时间戳的不同
+                var nMS = EndTime - Math.round(new Date().getTime() / 1000 - 28800);
+                //定义参数 获得天数
+                var nD = Math.floor(nMS / (60 * 60 * 24));
+                //定义参数 获得小时
+                var nH = Math.floor(nMS / (60 * 60)) % 24;
+                //定义参数 获得分钟
+                var nM = Math.floor(nMS / (60)) % 60;
+                //定义参数 获得秒钟
+                var nS = Math.floor(nMS) % 60;
+                //显示天数
+            dd="#dd"+arr[i];
+                $(dd).text(nD);
+                //显示小时
+            hh="#hh"+arr[i];
+                $(hh).text(nH);
+                //显示分钟
+            mm="#mm"+arr[i];
+                $(mm).text(nM);
+                //显示秒钟
+            ss="#ss"+arr[i];
+                $(ss).text(nS);
+
+        }
+
+    }
+
+    $(document).ready(function () {
+        //定义参数 显示出GetRTime()方法 1000毫秒以后启动  ，每1秒循环执行
+        var timer_rt = window.setInterval("GetRTime()", 1000);
+    });
+</script>
+

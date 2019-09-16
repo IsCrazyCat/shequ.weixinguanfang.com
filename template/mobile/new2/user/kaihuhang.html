@@ -1,0 +1,53 @@
+<include file="public/header" title="开户行" body=""/>
+<include file="public/header_nav" title="开户行"  href="{:U('Mobile/User/userinfo')}"/>
+<style>
+    .fetchcode{
+        background-color: #ec5151;
+        border-radius: 0.128rem;
+        color: white;
+        padding: 0.55467rem 0.21333rem;
+        vertical-align: middle;
+        font-size: 0.59733rem;
+    }
+    #fetchcode{
+        background:#898995;
+        border-radius: 0.128rem;
+        color: white;
+        padding: 0.55467rem 0.21333rem;
+        vertical-align: middle;
+        font-size: 0.59733rem;
+    }
+</style>
+<div class="loginsingup-input singupphone findpassword">
+    <form action="{:U('Mobile/User/userinfo')}" method="post" onsubmit="return submitverify(this)">
+        <div class="content30">
+            <div class="lsu bk">
+                <span>开户行</span>
+                <input type="text" name="kaihuhang" id="kaihuhang" value="{$user.kaihuhang}" placeholder="请输入您的开户行" />
+            </div>
+            <!--<div class="lsu boo zc_se">-->
+            <!--  <input type="text" id="email_code" name="email_code" value="" placeholder="邮箱验证码">
+              <a href="javascript:void(0);" rel="email"  id="fcode" onclick="sendcode(this)">获取邮箱验证码</a>
+          </div>-->
+            <div class="lsu submit">
+                <input type="submit" name="" id="" value="确认修改" />
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+
+    //提交前验证表单
+    function submitverify(obj){
+
+//                var emailcode = $('#mobile_code').val();
+//                if(emailcode == ''){
+//                    layer.open({content:'验证码不能空！',time:3});
+//                    return false;
+//                }
+        $(obj).onsubmit();
+    }
+</script>
+</body>
+</html>

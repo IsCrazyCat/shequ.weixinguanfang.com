@@ -1,0 +1,41 @@
+*{margin:0;padding:0;}
+body{ min-height: 100px; }
+ul{list-style: none}
+
+.mainBox{min-height:100px;width:100%;}
+.firstBox{min-height:200px;width:80%;margin:10px auto;position:relative}
+.menuBox{height:80px;background-color: #ccc;position: relative;}
+.menuBox ul{background-color:#fff;width:100%;height:80px;display: flex;justify-content: flex-start;align-items: center;}
+.menuBox ul li{ height: 80px; width: 33.333%; border-bottom: 1px solid #ccc; background-color: #DFDFDF; text-align: center; line-height: 80px; font-weight: bold; font-size: 30px; }
+.menuBox ul li.liactive{border-bottom:none; background-color: #3B3B3B; color: #fff}
+.contentBox{height:300px;width:100%;background-color: #fff;position:absolute;overflow: hidden;position:relative}
+.contentBox ul{height:300px;width:300%;display: flex;justify-content: center;align-items: center;margin-top:10px;position:absolute;left:0;top:0;transition: all 0.5s ease}
+.contentBox ul li{height:300px;width:100%;}
+.contentBox li{ line-height: 300px; text-align: center; color: #FFFFFF; font-size: 80px; }
+.green{background-color: green}
+.red{background-color: #005EDD}
+.yellow{background-color: #833030}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

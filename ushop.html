@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="app/css/app.css?v4"/>
+    <title>社群新零售 app 下载</title>
+</head>
+<body class="success">
+<div class="page-wrap">
+    <div class="info">
+        <div class="ok-btn"><img src="app/img/ok.png" alt="注册成功"></div>
+        <p class="entry-con">感谢您加入社群新零售</p>
+        <h2 class="entry-hd">社群新零售app</h2>
+    </div>
+    <div class="download">
+        <h3 class="entry-hd">立即下载</h3>
+        <p class="entry-con">社群新零售，合作共赢。</p>
+        <div class="download-btn" style=" text-align:center; margin-left:-1.5rem" ><!--<a href="#"><img src="app/img/ios-btn.png" alt="苹果版下载"></a>--><a href="/ushop.apk" class="android-btn" id="J_weixin"><img src="app/img/android-btn.png" alt="安卓版下载"></a></div>
+    </div>
+    <div class="app">
+        <img src="app/img/app.png" alt="应用预览">
+        <p class="entry-con">&nbsp;</p>
+    </div>
+    <div class="footer-bg">
+        <p class="entry-con">注：微信用户请在右上角选择"在浏览器中打开"，再选择下载应用</p>
+    </div>
+</div>
+<div id="weixin-tip"><p><img src="app/img/live_weixin.png" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p></div>
+<script type="text/javascript">
+    var is_weixin = (function() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    })();
+    window.onload = function(){
+        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+        var btn = document.getElementById('J_weixin');
+        var tip = document.getElementById('weixin-tip');
+        var close = document.getElementById('close');
+        if(is_weixin){
+            btn.onclick = function(e){
+                tip.style.height = winHeight + 'px';
+                tip.style.display = 'block';
+                return false;
+            }
+            close.onclick = function(){
+                tip.style.display = 'none';
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

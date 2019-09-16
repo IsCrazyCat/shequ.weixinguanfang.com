@@ -1,0 +1,378 @@
+[ 2019-09-11T11:32:50+08:00 ] 127.0.0.1 127.0.0.1 GET /font/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2
+[ log ] www.shequ.com/font/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2 [运行时间：0.066844s][吞吐率：14.96req/s] [内存消耗：1,774.49kb] [文件加载：37]
+[ info ] [ LANG ] E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'font',
+    1 => 'JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.shequ.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://www.shequ.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.shequ.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=94idlar1alpnmr92r4sddpck74; is_mobile=0; user_id=49; is_distribut=1; uname=15266853100; cn=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2019-09-11T11:32:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php
+[ log ] www.shequ.com/index.php [运行时间：0.100701s][吞吐率：9.93req/s] [内存消耗：3,037.09kb] [文件加载：56]
+[ info ] [ LANG ] E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.shequ.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=94idlar1alpnmr92r4sddpck74; is_mobile=0; user_id=49; is_distribut=1; uname=15266853100; cn=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\PhpStorm\shequ.weixinguanfang.com\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010229s ] mysql:dbname=shequ_weixinguanfang_com;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.006118s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.005978s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods_category` WHERE  (  is_show = 1 ) ORDER BY `sort_order` [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.006024s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  (  parent_cat_id>0 ) [ RunTime:0.000634s ]
+
+---------------------------------------------------------------
+[ 2019-09-11T11:32:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Mobile/Index/index.html
+[ log ] www.shequ.com/index.php/Mobile/Index/index.html [运行时间：0.166972s][吞吐率：5.99req/s] [内存消耗：3,674.75kb] [文件加载：62]
+[ info ] [ LANG ] E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.shequ.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=94idlar1alpnmr92r4sddpck74; is_mobile=0; user_id=49; is_distribut=1; uname=15266853100; cn=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\mobile\controller\Index->index[ E:\PhpStorm\shequ.weixinguanfang.com\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./template/mobile/new2/index\index.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'wx_qr',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'user',
+  9 => 'order_status_coment',
+  10 => 'thems',
+  11 => 'hot_goods',
+  12 => 'favourite_goods',
+  13 => 'dklist',
+  14 => 'catslist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010235s ] mysql:dbname=shequ_weixinguanfang_com;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_wx_user` [ RunTime:0.009488s ]
+[ sql ] [ SQL ] SELECT `qr` FROM `tp_wx_user` LIMIT 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.007156s ]
+[ sql ] [ SQL ] SELECT `id`,`cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  (  cat_id>0 ) [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_users` [ RunTime:0.006496s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_users` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.006049s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  (  is_hot=1 and is_on_sale=1 ) ORDER BY goods_id DESC LIMIT 20 [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.005901s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods_category` WHERE  (  level=1 ) ORDER BY `sort_order` LIMIT 9 [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  (  is_recommend=1 and is_on_sale=1 ) ORDER BY goods_id DESC LIMIT 20 [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_users` LIMIT 20 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_video_cat` [ RunTime:0.005635s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_video_cat` WHERE  (  parent_id = 2 ) ORDER BY cat_id asc [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_video` [ RunTime:0.005957s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_video` WHERE  (  cat_id = 3  ) ORDER BY video_id asc [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_video` WHERE  (  cat_id = 23  ) ORDER BY video_id asc [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_video` WHERE  (  cat_id = 24  ) ORDER BY video_id asc [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_video` WHERE  (  cat_id = 25  ) ORDER BY video_id asc [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_video` WHERE  (  cat_id = 26  ) ORDER BY video_id asc [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.005867s ]
+[ sql ] [ SQL ] SELECT `position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position` [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_ad` [ RunTime:0.005827s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_ad` WHERE  (  pid=2  and enabled = 1 and start_time < 1568170800 and end_time > 1568170800  ) ORDER BY orderby desc LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] select * from tp_goods where is_recommend=1 and is_on_sale=1 and cat_id=3 order by sort desc limit 9 [ RunTime:0.000576s ]
+[ sql ] [ SQL ] select * from tp_goods where is_recommend=1 and is_on_sale=1 and cat_id=4 order by sort desc limit 9 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] select * from tp_goods where is_recommend=1 and is_on_sale=1 and cat_id=26 order by sort desc limit 8 [ RunTime:0.000523s ]
+[ error ] [8]未定义数组索引: order[E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\Library\Think\template\taglib\Cx.php:103]
+[ error ] [8]未定义数组索引: where[E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\Library\Think\template\taglib\Cx.php:105]
+[ error ] [8]Use of undefined constant position - assumed 'position'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:95]
+[ error ] [8]Use of undefined constant pid - assumed 'pid'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:95]
+[ error ] [8]Use of undefined constant ad_code - assumed 'ad_code'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:104]
+[ error ] [8]Use of undefined constant title - assumed 'title'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:104]
+[ error ] [8]未定义数组索引: title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:104]
+[ error ] [8]Use of undefined constant style - assumed 'style'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:104]
+[ error ] [8]未定义数组索引: style[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:104]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant nickname - assumed 'nickname'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]未定义数组索引: nickname[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:123]
+[ error ] [8]Use of undefined constant reg_time - assumed 'reg_time'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]未定义数组索引: reg_time[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:127]
+[ error ] [8]Use of undefined constant goods_id - assumed 'goods_id'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:163]
+[ error ] [8]Use of undefined constant goods_id - assumed 'goods_id'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:206]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:355]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:356]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:447]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\c9cf4481a90b0133a8a1967e4c523434.php:448]
+
+---------------------------------------------------------------
+[ 2019-09-11T11:32:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/mobile/User/index.html
+[ log ] www.shequ.com/index.php/mobile/User/index.html [运行时间：0.204176s][吞吐率：4.90req/s] [内存消耗：4,676.89kb] [文件加载：67]
+[ info ] [ LANG ] E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'User',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.shequ.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.shequ.com/index.php/Mobile/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=94idlar1alpnmr92r4sddpck74; is_mobile=0; user_id=49; is_distribut=1; uname=15266853100; cn=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\mobile\controller\User->index[ E:\PhpStorm\shequ.weixinguanfang.com\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] ./template/mobile/new2/user\index.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'wx_qr',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'user',
+  9 => 'order_status_coment',
+  10 => 'user_message_count',
+  11 => 'level_name',
+  12 => 'comment_count',
+  13 => 'money',
+  14 => 'first_nickname',
+  15 => 'tui_con',
+  16 => 'tuan_con',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011079s ] mysql:dbname=shequ_weixinguanfang_com;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.005965s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.006587s ]
+[ sql ] [ SQL ] SELECT `id`,`cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  (  cat_id>0 ) [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_users` [ RunTime:0.006428s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_users` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `inc_type` = 'shop_info' [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_users` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_coupon_list` [ RunTime:0.005878s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_coupon_list` `l` INNER JOIN `tp_coupon` `c` ON `l`.`cid`=`c`.`id` WHERE  `l`.`uid` = 49  AND `l`.`order_id` = 0  AND `c`.`use_end_time` > 1568172779  AND `c`.`status` = 1 LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_collect` [ RunTime:0.006154s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_goods_collect` `c` INNER JOIN `tp_goods` `g` ON `g`.`goods_id`=`c`.`goods_id` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_return_goods` [ RunTime:0.006071s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_return_goods` WHERE  (  user_id=49 and status<2 ) LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.006415s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  (  user_id = '49'  AND pay_status = 0 AND order_status = 0 AND pay_code !="cod"  ) LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  (  user_id = '49'  AND (pay_status=1 OR pay_code="cod") AND shipping_status !=1 AND order_prom_type !=9 AND order_prom_type!=8 AND order_status in(0,1)  ) LIMIT 1 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  (  user_id = '49'  AND shipping_status=1 AND order_status = 1  ) LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comment` [ RunTime:0.005719s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_comment` `c` INNER JOIN `tp_order` `o` ON `o`.`order_id`=`c`.`order_id` INNER JOIN `tp_order_goods` `g` ON `c`.`goods_id`=g.goods_id AND c.order_id = g.order_id AND g.is_comment=1 WHERE  `c`.`user_id` = 49 LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.005909s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order_goods` `og` INNER JOIN `tp_order` `o` ON `o`.`order_id`=og.order_id AND o.user_id=49 AND o.order_status IN (2,4) WHERE  `og`.`is_send` = 1  AND `og`.`is_comment` = 0 LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user_level` [ RunTime:0.005874s ]
+[ sql ] [ SQL ] SELECT `level_name` FROM `tp_user_level` WHERE  `level_id` = 1 LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_rebate_log` [ RunTime:0.005675s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `tp_rebate_log` WHERE  `user_id` = 49  AND `status` = 3 LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user_message` [ RunTime:0.005717s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user_message` `um` LEFT JOIN `tp_message` `m` ON `um`.`message_id`=`m`.`message_id` WHERE  `um`.`user_id` = 49  AND `um`.`status` = 0 LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `tp_users` WHERE  `user_id` = 0 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_users` WHERE  `first_leader` = 49 LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_users` WHERE  (   first_leader = 49  ) [ RunTime:0.000596s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_users` WHERE  `user_id` IN (0) LIMIT 1 [ RunTime:0.000322s ]
+[ error ] [8]未定义变量: class[E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\helper.php:627]
+[ error ] [8]Use of undefined constant head_pic - assumed 'head_pic'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:28]
+[ error ] [8]Use of undefined constant level - assumed 'level'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:39]
+[ error ] [8]Use of undefined constant head_pic - assumed 'head_pic'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:81]
+[ error ] [8]Use of undefined constant head_pic - assumed 'head_pic'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:85]
+[ error ] [8]Use of undefined constant level - assumed 'level'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:107]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:717]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:718]
+[ error ] [8]未定义数组索引: shop_info_store_logo[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:718]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:758]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:765]
+[ error ] [8]未定义数组索引: shop_info_store_desc[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:766]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:772]
+[ error ] [8]未定义数组索引: shop_info_store_desc[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:773]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:779]
+[ error ] [8]未定义数组索引: shop_info_store_desc[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:780]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:809]
+[ error ] [8]Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST'[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:810]
+[ error ] [8]未定义数组索引: shop_info_store_logo[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:810]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:850]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:857]
+[ error ] [8]未定义数组索引: shop_info_store_desc[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:858]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:864]
+[ error ] [8]未定义数组索引: shop_info_store_desc[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:865]
+[ error ] [8]未定义数组索引: shop_info_store_title[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:871]
+[ error ] [8]未定义数组索引: shop_info_store_desc[E:\PhpStorm\shequ.weixinguanfang.com\runtime\temp\2d36ea712281b8f00eda9cd07297b4d8.php:872]
+
+---------------------------------------------------------------
+[ 2019-09-11T11:33:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Mobile/User/withdrawals.html
+[ log ] www.shequ.com/index.php/Mobile/User/withdrawals.html [运行时间：0.192767s][吞吐率：5.19req/s] [内存消耗：3,728.77kb] [文件加载：60]
+[ info ] [ LANG ] E:\PhpStorm\shequ.weixinguanfang.com\ThinkPHP\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'User',
+    2 => 'withdrawals',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.shequ.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://www.shequ.com/index.php/mobile/User/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=94idlar1alpnmr92r4sddpck74; is_mobile=0; user_id=49; is_distribut=1; uname=15266853100; cn=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\mobile\controller\User->withdrawals[ E:\PhpStorm\shequ.weixinguanfang.com\application\mobile\controller\User.php ]
+[ info ] [ VIEW ] ./template/mobile/new2/user\withdrawals.html [ array (
+  0 => 'action',
+  1 => 'template_now_time',
+  2 => 'wx_qr',
+  3 => 'first_login',
+  4 => 'goods_category_tree',
+  5 => 'brand_list',
+  6 => 'tpshop_config',
+  7 => 'user_id',
+  8 => 'user',
+  9 => 'order_status_coment',
+  10 => 'page',
+  11 => 'list',
+  12 => 'level_name',
+  13 => 'order_count',
+  14 => 'goods_collect_count',
+  15 => 'comment_count',
+  16 => 'coupon_count',
+  17 => 'user_money',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011177s ] mysql:dbname=shequ_weixinguanfang_com;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.005670s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.005621s ]
+[ sql ] [ SQL ] SELECT `id`,`cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE  (  cat_id>0 ) [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_users` [ RunTime:0.006026s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_users` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_withdrawals` [ RunTime:0.005602s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_withdrawals` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000950s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_withdrawals` WHERE  `user_id` = 49 ORDER BY id desc LIMIT 0,10 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.005999s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_collect` [ RunTime:0.005478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_goods_collect` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comment` [ RunTime:0.005635s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE  `user_id` = 49 LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_coupon_list` [ RunTime:0.005812s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_coupon_list` WHERE  `uid` = 49 LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user_level` [ RunTime:0.005625s ]
+[ sql ] [ SQL ] SELECT `level_name` FROM `tp_user_level` WHERE  `level_id` = 1 LIMIT 1 [ RunTime:0.000360s ]
+
+---------------------------------------------------------------
